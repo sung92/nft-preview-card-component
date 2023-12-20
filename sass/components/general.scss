@@ -1,0 +1,131 @@
+@use "../abstracts/functions.scss" as f;
+@use "../abstracts/colors.scss";
+
+/*IMG*/
+/***************/
+
+/*IMG*/
+
+.nft-link {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: f.rem(10px);
+    z-index: 1;
+    transition: opacity 0.3s;
+
+    &:hover &::before {
+        opacity: 0.5;
+    }
+
+    &:hover &::after {
+        opacity: 1;
+    }
+
+    &:focus-visible &::after {
+        opacity: 1;
+    }
+}
+
+.nft-link::before, .nft-link::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+}
+
+.nft-link::before {
+    background-color: var(--color-cyan);
+    opacity: 0;
+    z-index: 5;
+}
+
+.nft-link::after {
+    top: 45%;
+    left: 45%;
+    background-image: url("./images/icon-view.svg");
+    background-repeat: no-repeat;
+    width: 100%;
+    opacity: 0;
+    z-index: 10;
+}
+
+.nft-img {
+    display: block;
+    max-width: 100%;
+}
+
+
+.nft-title {
+    margin-top: f.rem(16px);
+    color: var(--color-white);
+    font-size: f.rem(22px);
+    cursor: pointer;
+
+    transition: all 0.3s;
+
+    &:hover {
+        color: var(--color-cyan);
+    }
+}
+
+.nft-desc {
+    margin-top: f.rem(16px);
+    text-wrap: wrap;
+    color: var(--color-soft-blue);
+}
+
+.nft-pricetime-wrap {
+    margin-top: f.rem(16px);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.nft-price {
+    display: flex;
+    align-items: center;
+    gap: f.rem(10px);
+    color: var(--color-cyan);
+    
+}
+
+.nft-time {
+    display: flex;
+    align-items: center;
+    gap: f.rem(10px);
+    color: var(--color-soft-blue);
+}
+
+.nft-creator {
+    margin-top: f.rem(16px);
+    border-top: 1px solid var(--color-very-darkblue-line);
+    display: flex;
+    gap: f.rem(20px)
+}
+
+.nft-creator img {
+    margin-top: f.rem(16px);
+    height: 12%;
+    width: 12%;
+
+    border-radius: 50%;
+    border: 1px solid #fdf2e9;
+}
+
+.nft-creator-author {
+    margin-top: f.rem(24px);
+    color: var(--color-soft-blue);
+}
+
+.nft-creator-author a {
+    color: var(--color-white);
+    text-decoration: none;
+    transition: all 0.3s;
+
+    &:hover {
+        color: var(--color-cyan);
+    }
+}
