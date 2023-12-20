@@ -43,9 +43,10 @@
 }
 
 .nft-link::after {
-    top: 45%;
-    left: 45%;
+    top: 0;
+    left: 0;
     background-image: url("./images/icon-view.svg");
+    background-position: center;
     background-repeat: no-repeat;
     width: 100%;
     opacity: 0;
