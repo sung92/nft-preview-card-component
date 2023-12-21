@@ -13,6 +13,7 @@
     cursor: pointer;
     border-radius: f.rem(10px);
     z-index: 1;
+    outline: none;
 
     &:hover:before {
         opacity: 0.5;
