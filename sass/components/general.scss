@@ -26,6 +26,8 @@
         opacity: 1;
     }
 }
+//You're doing .nft-link:hover .nft-link:before - which means, find an element .nft-link:before that is inside an element .nft-link:hover
+//What you actually want is to combine hover/focus-visible and the pseudo, so: .nft-link:hover:before, nft-link:focus-visible:before etc
 
 .nft-link::before, .nft-link::after {
     content: "";
